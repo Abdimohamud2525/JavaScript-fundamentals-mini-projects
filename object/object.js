@@ -66,7 +66,7 @@
 // }
 // console.log(AdultsNames());
 
-// Aikuisten keski-ikä
+// // Aikuisten keski-ikä
 
 // function AdultAverageAge() {
 //   let count = 0;
@@ -89,7 +89,7 @@
 // }
 // console.log(AdultAverageAge());
 
-// minors
+// minors;
 // function minors() {
 //   let minors = [];
 //   const people = [
@@ -109,7 +109,7 @@
 // }
 // console.log(minors());
 
-// Hae ihmiset tietystä kaupungista
+// // Hae ihmiset tietystä kaupungista
 // function findCity(people, cityName) {
 //   let result = [];
 //   for (let i = 0; i < people.length; i++) {
@@ -120,30 +120,64 @@
 //   }
 //   return result;
 // }
-// const people = [
-//   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
-//   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
-//   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
-//   { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
-//   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
-// ];
-// console.log(findCity(people, "somalia"));
+// // const people = [
+// //   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+// //   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+// //   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+// //   { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+// //   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+// // ];
+// // console.log(findCity(people, "somalia"));
 
-// Luo lista nimistä merkkijonoina
-function namesList() {
-  let info = [];
-  const people = [
-    { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
-    { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
-    { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
-    { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
-    { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
-  ];
-  for (let i = 0; i < people.length; i++) {
-    const curent = people[i].name;
-    info.push(curent);
-  }
-  return info;
+// // Luo lista nimistä merkkijonoina
+// function namesList() {
+//   let info = [];
+//   const people = [
+//     { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//     { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//     { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//     { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+//   ];
+//   for (let i = 0; i < people.length; i++) {
+//     const curent = people[i].name;
+//     info.push(curent);
+//   }
+//   return info;
+// }
+
+// console.log(namesList());
+
+// filter method
+// function adults() {
+//   const people = [
+//     { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//     { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//     { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//     { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+//   ];
+//   const result = people.filter(function (person) {
+//     return person.ages >= 18;
+//   });
+//   return result;
+// }
+
+// console.log(adults());
+
+// Aikuiset Helsingistä
+const people = [
+  { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+  { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+  { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+  { name: "ilyas", ages: 19, city: "Helsinki", isAdult: true },
+  { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+];
+
+function AdultsCity(people, city) {
+  const result = people.filter(function (people) {
+    return people.ages >= 18 && people.city === city;
+  });
+  return result;
 }
-
-console.log(namesList());
+console.log(AdultsCity(people, "Helsinki"));
