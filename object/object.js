@@ -165,7 +165,60 @@
 
 // console.log(adults());
 
-// Aikuiset Helsingistä
+// Aikuiset Helsingistä filter
+// const people = [
+//   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//   { name: "ilyas", ages: 19, city: "Helsinki", isAdult: true },
+//   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+// ];
+
+// function AdultsCity(people, city) {
+//   const result = people.filter(function (people) {
+//     return people.ages >= 18 && people.city === city;
+//   });
+//   return result;
+// }
+// console.log(AdultsCity(people, "Helsinki"));
+
+// // maps Tehtävä 1 – tuplaa numerot 2
+
+// const numbers = [1, 2, 3, 4, 5];
+// const result = numbers.map(function (num) {
+//   return num * 2;
+// });
+// console.log(result);
+
+// // Tehtävä 2 – numerot tekstiksi
+// const text = numbers.map(function (str) {
+//   return `${str} vuotta`;
+// });
+// console.log(text);
+
+// Tehtävä 1 – pelkät nimet listaksi map
+
+// const people = [
+//   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//   { name: "ilyas", ages: 19, city: "Helsinki", isAdult: true },
+//   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+// ];
+
+// const names = people.map(function (names) {
+//   return names.name;
+// });
+// // console.log(names);
+
+// // Tehtävä 2 – “Nimi (ikä)” -stringit map
+// const info = people.map(function (info) {
+//   return `nimi ${info.name} ikä ${info.ages}`;
+// });
+// console.log(info);
+
+// Tehtävä 1: Aikuisten nimet Helsingistä (filter + map)
+
 const people = [
   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
@@ -174,10 +227,10 @@ const people = [
   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
 ];
 
-function AdultsCity(people, city) {
-  const result = people.filter(function (people) {
-    return people.ages >= 18 && people.city === city;
-  });
-  return result;
-}
-console.log(AdultsCity(people, "Helsinki"));
+const Adultname = people.filter(function (person) {
+  return person.ages >= 18 && person.city === "Helsinki";
+});
+const result = Adultname.map(function (names) {
+  return names.name;
+});
+console.log(result);
