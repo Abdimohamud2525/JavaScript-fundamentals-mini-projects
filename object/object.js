@@ -4,8 +4,8 @@
 //   ikä: 30,
 //   city: "Helsinki",
 //   isAdult: true,
-// }
-// console.log(henkilö)
+// };
+// console.log(henkilö);
 
 // // tehtävä 2 Luo array, jossa on esim. 3–5 henkilöä.
 // //Jokainen alkio on objekti, jossa on samat kentät kuin edell
@@ -15,53 +15,222 @@
 //   { name: "abdi", age: 15, city: "somalia", isAdult: false },
 //   { name: "ali", age: 25, city: "finland", isAdult: true },
 //   { name: "ahmed", age: 35, city: "sweden", isAdult: true },
-// ]
+// ];
 // for (let i = 0; i < people.length; i++) {
-//   console.log(people[i].name)
-//   console.log(people[i].age)
+//   console.log(people[i].name);
+//   console.log(people[i].age);
 // }
-// console.log(people)
+// console.log(people);
 
-// tehtävä 3
+// // tehtävä 3
 // const countAdults = [
 //   { name: "abdi", age: 15, city: "somalia", isAdult: false },
 //   { name: "ali", age: 25, city: "finland", isAdult: true },
 //   { name: "ahmed", age: 35, city: "sweden", isAdult: true },
-// ]
-// let countAdult = 0
+// ];
+// let countAdult = 0;
 // for (let i = 0; i < countAdults.length; i++) {
-//   const current = countAdults[i].isAdult
-//   console.log(current)
+//   const current = countAdults[i].isAdult;
+//   console.log(current);
 //   if (current === true) {
-//     countAdult++
+//     countAdult++;
 //   }
 // }
 
 // // tai voi tehdä näinkin
-// let countAdult2 = 0
+// let countAdult2 = 0;
 // for (let i = 0; i < countAdults.length; i++) {
-//   const current = countAdults[i].age
+//   const current = countAdults[i].age;
 //   if (current >= 18) {
-//     countAdult2++
+//     countAdult2++;
 //   }
-//   console.log(current)
+//   console.log(current);
 // }
 
-function AdultsNames() {
-  let countNames = []
-  const people = [
-    { name: "abdi", ages: 20, city: "Helsinki", isAdult: true },
-    { name: "maxamed", ages: 30, city: "Helsinki", isAdult: true },
-    { name: "maxamud", ages: 25, city: "Helsinki", isAdult: true },
-    { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
-  ]
+// function AdultsNames() {
+//   let countNames = [];
+//   const people = [
+//     { name: "abdi", ages: 20, city: "Helsinki", isAdult: true },
+//     { name: "maxamed", ages: 30, city: "Helsinki", isAdult: true },
+//     { name: "maxamud", ages: 25, city: "Helsinki", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//   ];
 
-  for (let i = 0; i < people.length; i++) {
-    const current = people[i].ages
-    if (current >= 18) {
-      countNames.push(people[i].name)
-    }
-  }
-  return countNames
-}
-console.log(AdultsNames())
+//   for (let i = 0; i < people.length; i++) {
+//     const current = people[i].ages;
+//     if (current >= 18) {
+//       countNames.push(people[i].name);
+//     }
+//   }
+//   return countNames;
+// }
+// console.log(AdultsNames());
+
+// // Aikuisten keski-ikä
+
+// function AdultAverageAge() {
+//   let count = 0;
+//   let sum = 10;
+//   const people = [
+//     { name: "hamza", ages: 20, city: "Helsinki", isAdult: true },
+//     { name: "yoonis", ages: 30, city: "Helsinki", isAdult: true },
+//     { name: "ayaan", ages: 25, city: "Helsinki", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//   ];
+//   for (let i = 0; i < people.length; i++) {
+//     const curent = people[i].ages;
+//     if (curent >= 18) {
+//       count++;
+//       sum += curent;
+//       // console.log(sum);
+//     }
+//   }
+//   return sum / count;
+// }
+// console.log(AdultAverageAge());
+
+// minors;
+// function minors() {
+//   let minors = [];
+//   const people = [
+//     { name: "hamza", ages: 20, city: "Helsinki", isAdult: true },
+//     { name: "yoonis", ages: 30, city: "Helsinki", isAdult: true },
+//     { name: "ayaan", ages: 25, city: "Helsinki", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//     { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+//   ];
+//   for (let i = 0; i < people.length; i++) {
+//     const current = people[i].ages;
+//     if (current < 18) {
+//       minors.push(people[i]);
+//     }
+//   }
+//   return minors;
+// }
+// console.log(minors());
+
+// // Hae ihmiset tietystä kaupungista
+// function findCity(people, cityName) {
+//   let result = [];
+//   for (let i = 0; i < people.length; i++) {
+//     const current = people[i].city;
+//     if (current === cityName) {
+//       result.push(people[i]);
+//     }
+//   }
+//   return result;
+// }
+// // const people = [
+// //   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+// //   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+// //   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+// //   { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+// //   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+// // ];
+// // console.log(findCity(people, "somalia"));
+
+// // Luo lista nimistä merkkijonoina
+// function namesList() {
+//   let info = [];
+//   const people = [
+//     { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//     { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//     { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//     { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+//   ];
+//   for (let i = 0; i < people.length; i++) {
+//     const curent = people[i].name;
+//     info.push(curent);
+//   }
+//   return info;
+// }
+
+// console.log(namesList());
+
+// filter method
+// function adults() {
+//   const people = [
+//     { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//     { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//     { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//     { name: "ilyas", ages: 15, city: "Helsinki", isAdult: false },
+//     { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+//   ];
+//   const result = people.filter(function (person) {
+//     return person.ages >= 18;
+//   });
+//   return result;
+// }
+
+// console.log(adults());
+
+// Aikuiset Helsingistä filter
+// const people = [
+//   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//   { name: "ilyas", ages: 19, city: "Helsinki", isAdult: true },
+//   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+// ];
+
+// function AdultsCity(people, city) {
+//   const result = people.filter(function (people) {
+//     return people.ages >= 18 && people.city === city;
+//   });
+//   return result;
+// }
+// console.log(AdultsCity(people, "Helsinki"));
+
+// // maps Tehtävä 1 – tuplaa numerot 2
+
+// const numbers = [1, 2, 3, 4, 5];
+// const result = numbers.map(function (num) {
+//   return num * 2;
+// });
+// console.log(result);
+
+// // Tehtävä 2 – numerot tekstiksi
+// const text = numbers.map(function (str) {
+//   return `${str} vuotta`;
+// });
+// console.log(text);
+
+// Tehtävä 1 – pelkät nimet listaksi map
+
+// const people = [
+//   { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+//   { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+//   { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+//   { name: "ilyas", ages: 19, city: "Helsinki", isAdult: true },
+//   { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+// ];
+
+// const names = people.map(function (names) {
+//   return names.name;
+// });
+// // console.log(names);
+
+// // Tehtävä 2 – “Nimi (ikä)” -stringit map
+// const info = people.map(function (info) {
+//   return `nimi ${info.name} ikä ${info.ages}`;
+// });
+// console.log(info);
+
+// Tehtävä 1: Aikuisten nimet Helsingistä (filter + map)
+
+const people = [
+  { name: "hamza", ages: 20, city: "Sweden", isAdult: true },
+  { name: "yoonis", ages: 30, city: "somalia", isAdult: true },
+  { name: "ayaan", ages: 25, city: "kenya", isAdult: true },
+  { name: "ilyas", ages: 19, city: "Helsinki", isAdult: true },
+  { name: "maahirYares", ages: 8, city: "Helsinki", isAdult: false },
+];
+
+const Adultname = people.filter(function (person) {
+  return person.ages >= 18 && person.city === "Helsinki";
+});
+const result = Adultname.map(function (names) {
+  return names.name;
+});
+console.log(result);
